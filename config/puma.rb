@@ -6,7 +6,8 @@
 #
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }.to_i
 threads threads_count, threads_count
-
+application_path = '/var/www/pushkin-contest-bot/shared'
+bind "unix://#{application_path}/sockets/puma.socket"
 # Specifies the `port` that Puma will listen on to receive requests, default is 3000.
 #
 port        ENV.fetch("PORT") { 3000 }
