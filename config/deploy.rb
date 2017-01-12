@@ -7,8 +7,9 @@ set :branch, :master
 set :deploy_to, '/var/www/pushkin-contest-bot'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
+set :bundle_binstubs, nil
 set :rvm_ruby_version, 'ruby-2.3.1'  # Edit this to match ruby version you use
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
