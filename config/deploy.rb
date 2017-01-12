@@ -10,12 +10,13 @@ set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
 set :bundle_binstubs, nil
-set :rvm_ruby_version, 'ruby-2.3.1'  # Edit this to match ruby version you use
+set :rvm_ruby_version, 'ruby-2.3.1'   # Edit this to match ruby version you use
+set :stage, :production
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.state"
 set :puma_pid, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.pid"
-set :puma_bind, "unix://var/www/pushkin-contest-bot/shared/tmp/sockets/puma.sock"    #accept array for multi-bind
+set :puma_bind, "unix:///var/www/pushkin-contest-bot/shared/tmp/sockets/puma.sock"    #accept array for multi-bind
 set :puma_conf, "/var/www/pushkin-contest-bot/shared/puma.rb"
 set :puma_access_log, "/var/www/pushkin-contest-bot/shared/log/puma_error.log"
 set :puma_error_log, "/var/www/pushkin-contest-bot/shared/log/puma_access.log"
