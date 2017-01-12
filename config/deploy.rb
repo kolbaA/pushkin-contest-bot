@@ -1,6 +1,9 @@
 # config valid only for current version of Capistrano
 lock "3.7.1"
 
+
+server '77.244.213.7',  primary: true
+
 set :application, 'pushkin-contest-bot'
 set :repo_url, 'git@github.com:kolbaA/pushkin-contest-bot.git'  # Edit this to match your repository
 set :branch, :master
@@ -13,9 +16,9 @@ set :rvm_ruby_version, 'ruby-2.3.1'   # Edit this to match ruby version you use
 set :stage, :production
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-set :puma_state, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.state"
-set :puma_pid, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.pid"
-set :puma_bind, "unix:///var/www/pushkin-contest-bot/shared/tmp/sockets/puma.sock"    #accept array for multi-bind
+set :puma_state, "/var/www/pushkin-contest-bot/shared/pids/puma.state"
+set :puma_pid, "/var/www/pushkin-contest-bot/shared/pids/puma.pid"
+set :puma_bind, "unix:///var/www/pushkin-contest-bot/shared/sockets/puma.sock"    #accept array for multi-bind
 set :puma_conf, "/var/www/pushkin-contest-bot/shared/puma.rb"
 set :puma_access_log, "/var/www/pushkin-contest-bot/shared/log/puma_error.log"
 set :puma_error_log, "/var/www/pushkin-contest-bot/shared/log/puma_access.log"
