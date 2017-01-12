@@ -7,7 +7,7 @@ server '77.244.213.7',  primary: true
 set :application, 'pushkin-contest-bot'
 set :repo_url, 'git@github.com:kolbaA/pushkin-contest-bot.git'  # Edit this to match your repository
 set :branch, :master
-set :deploy_to, '/var/www/pushkin-contest-bot'
+set :deploy_to, '/var/pain/pushkin-contest-bot'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :keep_releases, 5
@@ -16,12 +16,12 @@ set :rvm_ruby_version, 'ruby-2.3.1'   # Edit this to match ruby version you use
 set :stage, :production
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-set :puma_state, "/var/www/pushkin-contest-bot/shared/pids/puma.state"
-set :puma_pid, "/var/www/pushkin-contest-bot/shared/pids/puma.pid"
-set :puma_bind, "unix:///var/www/pushkin-contest-bot/shared/sockets/puma.sock"    #accept array for multi-bind
-set :puma_conf, "/var/www/pushkin-contest-bot/shared/puma.rb"
-set :puma_access_log, "/var/www/pushkin-contest-bot/shared/log/puma_error.log"
-set :puma_error_log, "/var/www/pushkin-contest-bot/shared/log/puma_access.log"
+set :puma_state, "/var/pain/pushkin-contest-bot/shared/pids/puma.state"
+set :puma_pid, "/var/pain/pushkin-contest-bot/shared/pids/puma.pid"
+set :puma_bind, "unix:///var/pain/pushkin-contest-bot/shared/sockets/puma.sock"    #accept array for multi-bind
+set :puma_conf, "/var/pain/pushkin-contest-bot/shared/puma.rb"
+set :puma_access_log, "/var/pain/pushkin-contest-bot/shared/log/puma_error.log"
+set :puma_error_log, "/var/pain/pushkin-contest-bot/shared/log/puma_access.log"
 set :puma_role, :app
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
 set :puma_threads, [0, 8]
