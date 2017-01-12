@@ -1534,3 +1534,306 @@
   INFO [b0995361] Running /usr/bin/env echo "Branch master (at cde61e2a94f63e3f5b36e23d8f4562f8e64f2ee4) deployed as release 20170112210852 by kolba" >> /var/www/pushkin-contest-bot/revisions.log as deploy@77.244.213.7
  DEBUG [b0995361] Command: cd /var/www/pushkin-contest-bot/releases && /usr/bin/env echo "Branch master (at cde61e2a94f63e3f5b36e23d8f4562f8e64f2ee4) deployed as release 20170112210852 by kolba" >> /var/www/pushkin-contest-bot/revisions.log
   INFO [b0995361] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 00:22:11 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [892fae0c] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [892fae0c] Command: [ -d ~/.rvm ]
+ DEBUG [892fae0c] Finished in 0.738 seconds with exit status 1 (failed).
+ DEBUG [18e16155] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [18e16155] Command: [ -d /usr/local/rvm ]
+ DEBUG [18e16155] Finished in 0.689 seconds with exit status 0 (successful).
+ DEBUG [9cd995c4] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [9cd995c4] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [9cd995c4] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [9cd995c4] 	
+ DEBUG [9cd995c4] Finished in 0.882 seconds with exit status 0 (successful).
+ DEBUG [5403338c] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [5403338c] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [5403338c] 	ruby-2.3.3
+ DEBUG [5403338c] 	
+ DEBUG [5403338c] Finished in 0.858 seconds with exit status 0 (successful).
+ DEBUG [855587c6] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [855587c6] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [855587c6] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [855587c6] 	
+ DEBUG [855587c6] Finished in 0.762 seconds with exit status 0 (successful).
+  INFO [3569009c] Running /usr/bin/env mkdir -p /tmp as deploy@77.244.213.7
+ DEBUG [3569009c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3569009c] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 0.0%
+  INFO Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 100.0%
+  INFO [12d952dc] Running /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh as deploy@77.244.213.7
+ DEBUG [12d952dc] Command: /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh
+  INFO [12d952dc] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [de70bf80] Running /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git as deploy@77.244.213.7
+ DEBUG [de70bf80] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git )
+ DEBUG [de70bf80] 	38f28b81d8a941a95ef3f298039cdacc512a2a63
+ DEBUG [de70bf80] 		refs/heads/master
+  INFO [de70bf80] Finished in 2.192 seconds with exit status 0 (successful).
+  INFO [6789c5d2] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared /var/www/pushkin-contest-bot/releases as deploy@77.244.213.7
+ DEBUG [6789c5d2] Command: /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared /var/www/pushkin-contest-bot/releases
+  INFO [6789c5d2] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [7cd615bf] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared/log /var/www/pushkin-contest-bot/shared/tmp/pids /var/www/pushkin-contest-bot/shared/tmp/cache /var/www/pushkin-contest-bot/shared/tmp/sockets /var/www/pushkin-contest-bot/shared/vendor/bundle /var/www/pushkin-contest-bot/shared/public/system /var/www/pushkin-contest-bot/shared/public/uploads /var/www/pushkin-contest-bot/shared/public/assets as deploy@77.244.213.7
+ DEBUG [7cd615bf] Command: /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared/log /var/www/pushkin-contest-bot/shared/tmp/pids /var/www/pushkin-contest-bot/shared/tmp/cache /var/www/pushkin-contest-bot/shared/tmp/sockets /var/www/pushkin-contest-bot/shared/vendor/bundle /var/www/pushkin-contest-bot/shared/public/system /var/www/pushkin-contest-bot/shared/public/uploads /var/www/pushkin-contest-bot/shared/public/assets
+  INFO [7cd615bf] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [70e1f72f] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared/config as deploy@77.244.213.7
+ DEBUG [70e1f72f] Command: /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/shared/config
+  INFO [70e1f72f] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [1912601a] Running [ -f /var/www/pushkin-contest-bot/shared/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [1912601a] Command: [ -f /var/www/pushkin-contest-bot/shared/config/database.yml ]
+ DEBUG [1912601a] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [c6d76e05] Running [ -f /var/www/pushkin-contest-bot/shared/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [c6d76e05] Command: [ -f /var/www/pushkin-contest-bot/shared/config/application.yml ]
+ DEBUG [c6d76e05] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [a6f2e421] Running [ -f /var/www/pushkin-contest-bot/current/REVISION ] as deploy@77.244.213.7
+ DEBUG [a6f2e421] Command: [ -f /var/www/pushkin-contest-bot/current/REVISION ]
+ DEBUG [a6f2e421] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [ecd17124] Running /usr/bin/env cat /var/www/pushkin-contest-bot/current/REVISION 2>/dev/null as deploy@77.244.213.7
+ DEBUG [ecd17124] Command: /usr/bin/env cat /var/www/pushkin-contest-bot/current/REVISION 2>/dev/null
+ DEBUG [ecd17124] 	cde61e2a94f63e3f5b36e23d8f4562f8e64f2ee4
+ DEBUG [ecd17124] 	
+ DEBUG [ecd17124] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [520fe222] Running [ -f /var/www/pushkin-contest-bot/repo/HEAD ] as deploy@77.244.213.7
+ DEBUG [520fe222] Command: [ -f /var/www/pushkin-contest-bot/repo/HEAD ]
+ DEBUG [520fe222] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/pushkin-contest-bot/repo
+ DEBUG [6f547fcd] Running if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [6f547fcd] Command: if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [6f547fcd] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [36d96ee5] Running /usr/bin/env git remote update --prune as deploy@77.244.213.7
+ DEBUG [36d96ee5] Command: cd /var/www/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [36d96ee5] 	Fetching origin
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	remote: Counting objects: 7, done.[K
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	remote: Compressing objects:  50% (1/2)   [K
+ DEBUG [36d96ee5] 	remote: Compressing objects: 100% (2/2)   [K
+ DEBUG [36d96ee5] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	remote: Total 7 (delta 5), reused 7 (delta 5), pack-reused 0[K
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	Unpacking objects:  14% (1/7)   
+ DEBUG [36d96ee5] 	Unpacking objects:  28% (2/7)   
+ DEBUG [36d96ee5] 	Unpacking objects:  42% (3/7)   
+ DEBUG [36d96ee5] 	Unpacking objects:  57% (4/7)   
+ DEBUG [36d96ee5] 	Unpacking objects:  71% (5/7)   
+ DEBUG [36d96ee5] 	Unpacking objects:  85% (6/7)   
+ DEBUG [36d96ee5] 	Unpacking objects: 100% (7/7)   
+ DEBUG [36d96ee5] 	Unpacking objects: 100% (7/7), done.
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	From github.com:kolbaA/pushkin-contest-bot
+ DEBUG [36d96ee5] 	
+ DEBUG [36d96ee5] 	   cde61e2..38f28b8  master     -> master
+ DEBUG [36d96ee5] 	
+  INFO [36d96ee5] Finished in 2.529 seconds with exit status 0 (successful).
+ DEBUG [13f5f985] Running if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [13f5f985] Command: if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [13f5f985] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [43dc3e3c] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218 as deploy@77.244.213.7
+ DEBUG [43dc3e3c] Command: cd /var/www/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218 )
+  INFO [43dc3e3c] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [ea9dd030] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pushkin-contest-bot/releases/20170112212218 as deploy@77.244.213.7
+ DEBUG [ea9dd030] Command: cd /var/www/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pushkin-contest-bot/releases/20170112212218 )
+  INFO [ea9dd030] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [0cff1d69] Running if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [0cff1d69] Command: if test ! -d /var/www/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/www/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [0cff1d69] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [586c59d6] Running /usr/bin/env git rev-list --max-count=1 master as deploy@77.244.213.7
+ DEBUG [586c59d6] Command: cd /var/www/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [586c59d6] 	38f28b81d8a941a95ef3f298039cdacc512a2a63
+ DEBUG [586c59d6] 	
+ DEBUG [586c59d6] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [8ff13e7f] Running if test ! -d /var/www/pushkin-contest-bot/releases/20170112212218; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases/20170112212218'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [8ff13e7f] Command: if test ! -d /var/www/pushkin-contest-bot/releases/20170112212218; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases/20170112212218'" 1>&2; false; fi
+ DEBUG [8ff13e7f] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [d6fb589b] Running /usr/bin/env echo "38f28b81d8a941a95ef3f298039cdacc512a2a63" >> REVISION as deploy@77.244.213.7
+ DEBUG [d6fb589b] Command: cd /var/www/pushkin-contest-bot/releases/20170112212218 && /usr/bin/env echo "38f28b81d8a941a95ef3f298039cdacc512a2a63" >> REVISION
+  INFO [d6fb589b] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [f46b0c47] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218/config as deploy@77.244.213.7
+ DEBUG [f46b0c47] Command: /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218/config
+  INFO [f46b0c47] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [03146e80] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [03146e80] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml ]
+ DEBUG [03146e80] Finished in 0.081 seconds with exit status 1 (failed).
+ DEBUG [65428895] Running [ -f /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [65428895] Command: [ -f /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml ]
+ DEBUG [65428895] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [b5cd6bcb] Running /usr/bin/env rm /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml as deploy@77.244.213.7
+ DEBUG [b5cd6bcb] Command: /usr/bin/env rm /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml
+  INFO [b5cd6bcb] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [cc3e375c] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/config/database.yml /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml as deploy@77.244.213.7
+ DEBUG [cc3e375c] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/config/database.yml /var/www/pushkin-contest-bot/releases/20170112212218/config/database.yml
+  INFO [cc3e375c] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [f829e804] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [f829e804] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml ]
+ DEBUG [f829e804] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [ab7e64df] Running [ -f /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [ab7e64df] Command: [ -f /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml ]
+ DEBUG [ab7e64df] Finished in 0.079 seconds with exit status 1 (failed).
+  INFO [8cd10322] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/config/application.yml /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml as deploy@77.244.213.7
+ DEBUG [8cd10322] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/config/application.yml /var/www/pushkin-contest-bot/releases/20170112212218/config/application.yml
+  INFO [8cd10322] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [02861f06] Running /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218 /var/www/pushkin-contest-bot/releases/20170112212218/tmp /var/www/pushkin-contest-bot/releases/20170112212218/vendor /var/www/pushkin-contest-bot/releases/20170112212218/public as deploy@77.244.213.7
+ DEBUG [02861f06] Command: /usr/bin/env mkdir -p /var/www/pushkin-contest-bot/releases/20170112212218 /var/www/pushkin-contest-bot/releases/20170112212218/tmp /var/www/pushkin-contest-bot/releases/20170112212218/vendor /var/www/pushkin-contest-bot/releases/20170112212218/public
+  INFO [02861f06] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [5abaffaa] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/log ] as deploy@77.244.213.7
+ DEBUG [5abaffaa] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/log ]
+ DEBUG [5abaffaa] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [f893a7ce] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/log ] as deploy@77.244.213.7
+ DEBUG [f893a7ce] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/log ]
+ DEBUG [f893a7ce] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [054b765f] Running /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112212218/log as deploy@77.244.213.7
+ DEBUG [054b765f] Command: /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112212218/log
+  INFO [054b765f] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [70267f8e] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/log /var/www/pushkin-contest-bot/releases/20170112212218/log as deploy@77.244.213.7
+ DEBUG [70267f8e] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/log /var/www/pushkin-contest-bot/releases/20170112212218/log
+  INFO [70267f8e] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [5ea00a1e] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids ] as deploy@77.244.213.7
+ DEBUG [5ea00a1e] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids ]
+ DEBUG [5ea00a1e] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [ff40acb1] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids ] as deploy@77.244.213.7
+ DEBUG [ff40acb1] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids ]
+ DEBUG [ff40acb1] Finished in 0.078 seconds with exit status 1 (failed).
+  INFO [f490e6e5] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/pids /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids as deploy@77.244.213.7
+ DEBUG [f490e6e5] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/pids /var/www/pushkin-contest-bot/releases/20170112212218/tmp/pids
+  INFO [f490e6e5] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [f74247bc] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache ] as deploy@77.244.213.7
+ DEBUG [f74247bc] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache ]
+ DEBUG [f74247bc] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [60cf4939] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache ] as deploy@77.244.213.7
+ DEBUG [60cf4939] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache ]
+ DEBUG [60cf4939] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [9b8da91c] Running /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache as deploy@77.244.213.7
+ DEBUG [9b8da91c] Command: /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache
+  INFO [9b8da91c] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [60e5331e] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/cache /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache as deploy@77.244.213.7
+ DEBUG [60e5331e] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/cache /var/www/pushkin-contest-bot/releases/20170112212218/tmp/cache
+  INFO [60e5331e] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [9d03aac9] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets ] as deploy@77.244.213.7
+ DEBUG [9d03aac9] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets ]
+ DEBUG [9d03aac9] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [d63d8c66] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets ] as deploy@77.244.213.7
+ DEBUG [d63d8c66] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets ]
+ DEBUG [d63d8c66] Finished in 0.079 seconds with exit status 1 (failed).
+  INFO [e86fbbf4] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/sockets /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets as deploy@77.244.213.7
+ DEBUG [e86fbbf4] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/tmp/sockets /var/www/pushkin-contest-bot/releases/20170112212218/tmp/sockets
+  INFO [e86fbbf4] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [4d756eb6] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle ] as deploy@77.244.213.7
+ DEBUG [4d756eb6] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle ]
+ DEBUG [4d756eb6] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [5ecf5cd6] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle ] as deploy@77.244.213.7
+ DEBUG [5ecf5cd6] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle ]
+ DEBUG [5ecf5cd6] Finished in 0.078 seconds with exit status 1 (failed).
+  INFO [efc93eb5] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/vendor/bundle /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle as deploy@77.244.213.7
+ DEBUG [efc93eb5] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/vendor/bundle /var/www/pushkin-contest-bot/releases/20170112212218/vendor/bundle
+  INFO [efc93eb5] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [8c676345] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/system ] as deploy@77.244.213.7
+ DEBUG [8c676345] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/system ]
+ DEBUG [8c676345] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [d076b3b6] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/system ] as deploy@77.244.213.7
+ DEBUG [d076b3b6] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/system ]
+ DEBUG [d076b3b6] Finished in 0.080 seconds with exit status 1 (failed).
+  INFO [1ac452a6] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/system /var/www/pushkin-contest-bot/releases/20170112212218/public/system as deploy@77.244.213.7
+ DEBUG [1ac452a6] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/system /var/www/pushkin-contest-bot/releases/20170112212218/public/system
+  INFO [1ac452a6] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [ca461320] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads ] as deploy@77.244.213.7
+ DEBUG [ca461320] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads ]
+ DEBUG [ca461320] Finished in 0.080 seconds with exit status 1 (failed).
+ DEBUG [70676b4c] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads ] as deploy@77.244.213.7
+ DEBUG [70676b4c] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads ]
+ DEBUG [70676b4c] Finished in 0.079 seconds with exit status 1 (failed).
+  INFO [08a56a66] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/uploads /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads as deploy@77.244.213.7
+ DEBUG [08a56a66] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/uploads /var/www/pushkin-contest-bot/releases/20170112212218/public/uploads
+  INFO [08a56a66] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [13b69848] Running [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/assets ] as deploy@77.244.213.7
+ DEBUG [13b69848] Command: [ -L /var/www/pushkin-contest-bot/releases/20170112212218/public/assets ]
+ DEBUG [13b69848] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [caaca7d8] Running [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/assets ] as deploy@77.244.213.7
+ DEBUG [caaca7d8] Command: [ -d /var/www/pushkin-contest-bot/releases/20170112212218/public/assets ]
+ DEBUG [caaca7d8] Finished in 0.080 seconds with exit status 1 (failed).
+  INFO [c20a05c6] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/assets /var/www/pushkin-contest-bot/releases/20170112212218/public/assets as deploy@77.244.213.7
+ DEBUG [c20a05c6] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/shared/public/assets /var/www/pushkin-contest-bot/releases/20170112212218/public/assets
+  INFO [c20a05c6] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [04b6bfff] Running if test ! -d /var/www/pushkin-contest-bot/releases/20170112212218; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases/20170112212218'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [04b6bfff] Command: if test ! -d /var/www/pushkin-contest-bot/releases/20170112212218; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases/20170112212218'" 1>&2; false; fi
+ DEBUG [04b6bfff] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [20d55bb2] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle check --path /var/www/pushkin-contest-bot/shared/bundle as deploy@77.244.213.7
+ DEBUG [20d55bb2] Command: cd /var/www/pushkin-contest-bot/releases/20170112212218 && /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle check --path /var/www/pushkin-contest-bot/shared/bundle
+ DEBUG [20d55bb2] 	[31mThe following gems are missing[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * byebug (9.0.6)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * ffi (1.9.14)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * listen (3.0.8)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * spring (2.0.0)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[31m * web-console (3.4.0)[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [20d55bb2] 	
+ DEBUG [20d55bb2] Finished in 1.187 seconds with exit status 1 (failed).
+  INFO [f418c295] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle install --path /var/www/pushkin-contest-bot/shared/bundle --without development test --deployment --quiet as deploy@77.244.213.7
+ DEBUG [f418c295] Command: cd /var/www/pushkin-contest-bot/releases/20170112212218 && /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle install --path /var/www/pushkin-contest-bot/shared/bundle --without development test --deployment --quiet
+  INFO [f418c295] Finished in 5.284 seconds with exit status 0 (successful).
+  INFO [1d037af0] Running /usr/bin/env ln -s /var/www/pushkin-contest-bot/releases/20170112212218 /var/www/pushkin-contest-bot/releases/current as deploy@77.244.213.7
+ DEBUG [1d037af0] Command: /usr/bin/env ln -s /var/www/pushkin-contest-bot/releases/20170112212218 /var/www/pushkin-contest-bot/releases/current
+  INFO [1d037af0] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [f8a672aa] Running /usr/bin/env mv /var/www/pushkin-contest-bot/releases/current /var/www/pushkin-contest-bot as deploy@77.244.213.7
+ DEBUG [f8a672aa] Command: /usr/bin/env mv /var/www/pushkin-contest-bot/releases/current /var/www/pushkin-contest-bot
+  INFO [f8a672aa] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [4e71187e] Running /usr/bin/env ls -x /var/www/pushkin-contest-bot/releases as deploy@77.244.213.7
+ DEBUG [4e71187e] Command: /usr/bin/env ls -x /var/www/pushkin-contest-bot/releases
+ DEBUG [4e71187e] 	20170112193806
+ DEBUG [4e71187e] 		
+ DEBUG [4e71187e] 	20170112202242
+ DEBUG [4e71187e] 		
+ DEBUG [4e71187e] 	20170112204257
+ DEBUG [4e71187e] 		
+ DEBUG [4e71187e] 	20170112204612
+ DEBUG [4e71187e] 		
+ DEBUG [4e71187e] 	20170112210852
+ DEBUG [4e71187e] 	
+ DEBUG [4e71187e] 	20170112212218
+ DEBUG [4e71187e] 	
+ DEBUG [4e71187e] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 77.244.213.7
+  INFO [e1000e6f] Running /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112193806 as deploy@77.244.213.7
+ DEBUG [e1000e6f] Command: /usr/bin/env rm -rf /var/www/pushkin-contest-bot/releases/20170112193806
+  INFO [e1000e6f] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [71f72e5a] Running if test ! -d /var/www/pushkin-contest-bot/releases; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [71f72e5a] Command: if test ! -d /var/www/pushkin-contest-bot/releases; then echo "Directory does not exist '/var/www/pushkin-contest-bot/releases'" 1>&2; false; fi
+ DEBUG [71f72e5a] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [fff8f64a] Running /usr/bin/env echo "Branch master (at 38f28b81d8a941a95ef3f298039cdacc512a2a63) deployed as release 20170112212218 by kolba" >> /var/www/pushkin-contest-bot/revisions.log as deploy@77.244.213.7
+ DEBUG [fff8f64a] Command: cd /var/www/pushkin-contest-bot/releases && /usr/bin/env echo "Branch master (at 38f28b81d8a941a95ef3f298039cdacc512a2a63) deployed as release 20170112212218 by kolba" >> /var/www/pushkin-contest-bot/revisions.log
+  INFO [fff8f64a] Finished in 0.085 seconds with exit status 0 (successful).
