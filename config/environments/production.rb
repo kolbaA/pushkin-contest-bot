@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  POEMS = eval(File.read("public/trueDblevel1.txt"))
+  POEMS = eval(File.read("public/finalDblevel1.txt"))
   POEMS_WITHOUT_WORD = eval(File.read("public/trueDblevel2to4.txt"))
   POEMS_FOR_6_LEVEL = eval(File.read("public/trueDblevel6.txt"))
   POEMS_FOR_7_LEVEL = eval(File.read("public/trueDblevel7.txt"))

@@ -2,7 +2,7 @@ class QuestionController < ApplicationController
   def new
     head :ok, content_type: 'text/html'
     @question = Question.new(question_params)
-    @answer = Answer.new(value: @question.send(leveler(params[:level].to_s)), task_id: @question.task_id)
+    @answer = Answer.new(value: @question.send(leveler(params[:level].to_s)), task_id: @question.id)
     do_post(@answer)
     Thread.new do
       Question.create(question_params)
@@ -15,7 +15,7 @@ class QuestionController < ApplicationController
   end
 
   def question_params
-    params.permit(:question, :task_id, :level)
+    params.permit(:question, :id, :level)
   end
 
   def answer_params

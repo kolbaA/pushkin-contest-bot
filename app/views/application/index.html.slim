@@ -6,6 +6,6 @@ html
    
     - @questions.reverse.each do |question|
      br 
-     = "Task ID:#{question.task_id}"
-     = "Question:#{question.value}"
-     = "Answer:#{question.answer.value}"
+     = "Task ID:#{question.id}"
+     = "Question:#{question.question}"
+     = "Answer:#{question.answer.value if !question.answer.eql?(nil)} TASK_ID #{question.answer.task_id if !question.answer.eql?(nil)}"
