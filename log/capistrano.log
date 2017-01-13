@@ -2922,3 +2922,423 @@
   INFO [de8b7635] Running /usr/bin/env echo "Branch master (at 23ab77bd89c3161dcd9a834d2e577a07de9ba31d) deployed as release 20170112220739 by kolba" >> /var/pain/pushkin-contest-bot/revisions.log as deploy@77.244.213.7
  DEBUG [de8b7635] Command: cd /var/pain/pushkin-contest-bot/releases && /usr/bin/env echo "Branch master (at 23ab77bd89c3161dcd9a834d2e577a07de9ba31d) deployed as release 20170112220739 by kolba" >> /var/pain/pushkin-contest-bot/revisions.log
   INFO [de8b7635] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 01:13:42 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e31e3aaf] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [e31e3aaf] Command: [ -d ~/.rvm ]
+ DEBUG [e31e3aaf] Finished in 0.790 seconds with exit status 1 (failed).
+ DEBUG [413b592a] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [413b592a] Command: [ -d /usr/local/rvm ]
+ DEBUG [413b592a] Finished in 0.646 seconds with exit status 0 (successful).
+ DEBUG [a6700918] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [a6700918] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [a6700918] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [a6700918] 	
+ DEBUG [a6700918] Finished in 0.973 seconds with exit status 0 (successful).
+ DEBUG [4a787db1] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [4a787db1] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [4a787db1] 	ruby-2.3.3
+ DEBUG [4a787db1] 	
+ DEBUG [4a787db1] Finished in 0.967 seconds with exit status 0 (successful).
+ DEBUG [90e6c1db] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [90e6c1db] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [90e6c1db] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [90e6c1db] 	
+ DEBUG [90e6c1db] Finished in 0.754 seconds with exit status 0 (successful).
+  INFO [8ebbf6ae] Running /usr/bin/env mkdir -p /tmp as deploy@77.244.213.7
+ DEBUG [8ebbf6ae] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8ebbf6ae] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 0.0%
+  INFO Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 100.0%
+  INFO [220a08e3] Running /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh as deploy@77.244.213.7
+ DEBUG [220a08e3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh
+  INFO [220a08e3] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [6bab3be4] Running /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git as deploy@77.244.213.7
+ DEBUG [6bab3be4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git )
+ DEBUG [6bab3be4] 	66f830dbc209fd04e5468084647f4eeccf0217fd
+ DEBUG [6bab3be4] 		refs/heads/master
+  INFO [6bab3be4] Finished in 2.619 seconds with exit status 0 (successful).
+  INFO [a5a4bd11] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared /var/pain/pushkin-contest-bot/releases as deploy@77.244.213.7
+ DEBUG [a5a4bd11] Command: /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared /var/pain/pushkin-contest-bot/releases
+  INFO [a5a4bd11] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [86dd38ca] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared/public/assets as deploy@77.244.213.7
+ DEBUG [86dd38ca] Command: /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared/public/assets
+  INFO [86dd38ca] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [947d2f33] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared/config as deploy@77.244.213.7
+ DEBUG [947d2f33] Command: /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/shared/config
+  INFO [947d2f33] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [2038a13d] Running [ -f /var/pain/pushkin-contest-bot/shared/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [2038a13d] Command: [ -f /var/pain/pushkin-contest-bot/shared/config/database.yml ]
+ DEBUG [2038a13d] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [1aa36b2e] Running [ -f /var/pain/pushkin-contest-bot/shared/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [1aa36b2e] Command: [ -f /var/pain/pushkin-contest-bot/shared/config/application.yml ]
+ DEBUG [1aa36b2e] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [1f3b96c4] Running [ -f /var/pain/pushkin-contest-bot/current/REVISION ] as deploy@77.244.213.7
+ DEBUG [1f3b96c4] Command: [ -f /var/pain/pushkin-contest-bot/current/REVISION ]
+ DEBUG [1f3b96c4] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [92f97849] Running /usr/bin/env cat /var/pain/pushkin-contest-bot/current/REVISION 2>/dev/null as deploy@77.244.213.7
+ DEBUG [92f97849] Command: /usr/bin/env cat /var/pain/pushkin-contest-bot/current/REVISION 2>/dev/null
+ DEBUG [92f97849] 	23ab77bd89c3161dcd9a834d2e577a07de9ba31d
+ DEBUG [92f97849] 	
+ DEBUG [92f97849] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [40a500c1] Running [ -f /var/pain/pushkin-contest-bot/repo/HEAD ] as deploy@77.244.213.7
+ DEBUG [40a500c1] Command: [ -f /var/pain/pushkin-contest-bot/repo/HEAD ]
+ DEBUG [40a500c1] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/pain/pushkin-contest-bot/repo
+ DEBUG [3120a181] Running if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [3120a181] Command: if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [3120a181] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [0d155f77] Running /usr/bin/env git remote update --prune as deploy@77.244.213.7
+ DEBUG [0d155f77] Command: cd /var/pain/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0d155f77] 	Fetching origin
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	remote: Counting objects: 6, done.[K
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	remote: Compressing objects:  50% (1/2)   [K
+ DEBUG [0d155f77] 	remote: Compressing objects: 100% (2/2)   [K
+ DEBUG [0d155f77] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0[K
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	Unpacking objects:  16% (1/6)   
+ DEBUG [0d155f77] 	Unpacking objects:  33% (2/6)   
+ DEBUG [0d155f77] 	Unpacking objects:  50% (3/6)   
+ DEBUG [0d155f77] 	Unpacking objects:  66% (4/6)   
+ DEBUG [0d155f77] 	Unpacking objects:  83% (5/6)   
+ DEBUG [0d155f77] 	Unpacking objects: 100% (6/6)   
+ DEBUG [0d155f77] 	Unpacking objects: 100% (6/6), done.
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	From github.com:kolbaA/pushkin-contest-bot
+ DEBUG [0d155f77] 	
+ DEBUG [0d155f77] 	   23ab77b..66f830d  master     -> master
+ DEBUG [0d155f77] 	
+  INFO [0d155f77] Finished in 2.843 seconds with exit status 0 (successful).
+ DEBUG [94472282] Running if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [94472282] Command: if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [94472282] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [90df848c] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350 as deploy@77.244.213.7
+ DEBUG [90df848c] Command: cd /var/pain/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350 )
+  INFO [90df848c] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [1ecc0d90] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/pain/pushkin-contest-bot/releases/20170112221350 as deploy@77.244.213.7
+ DEBUG [1ecc0d90] Command: cd /var/pain/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/pain/pushkin-contest-bot/releases/20170112221350 )
+  INFO [1ecc0d90] Finished in 0.278 seconds with exit status 0 (successful).
+ DEBUG [7ce129f4] Running if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [7ce129f4] Command: if test ! -d /var/pain/pushkin-contest-bot/repo; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/repo'" 1>&2; false; fi
+ DEBUG [7ce129f4] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [452e306a] Running /usr/bin/env git rev-list --max-count=1 master as deploy@77.244.213.7
+ DEBUG [452e306a] Command: cd /var/pain/pushkin-contest-bot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [452e306a] 	66f830dbc209fd04e5468084647f4eeccf0217fd
+ DEBUG [452e306a] 	
+ DEBUG [452e306a] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [1af784c7] Running if test ! -d /var/pain/pushkin-contest-bot/releases/20170112221350; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases/20170112221350'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [1af784c7] Command: if test ! -d /var/pain/pushkin-contest-bot/releases/20170112221350; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases/20170112221350'" 1>&2; false; fi
+ DEBUG [1af784c7] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [63433229] Running /usr/bin/env echo "66f830dbc209fd04e5468084647f4eeccf0217fd" >> REVISION as deploy@77.244.213.7
+ DEBUG [63433229] Command: cd /var/pain/pushkin-contest-bot/releases/20170112221350 && /usr/bin/env echo "66f830dbc209fd04e5468084647f4eeccf0217fd" >> REVISION
+  INFO [63433229] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [1ce2642f] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350/config as deploy@77.244.213.7
+ DEBUG [1ce2642f] Command: /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350/config
+  INFO [1ce2642f] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [6b838ab7] Running [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [6b838ab7] Command: [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml ]
+ DEBUG [6b838ab7] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [df369a24] Running [ -f /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml ] as deploy@77.244.213.7
+ DEBUG [df369a24] Command: [ -f /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml ]
+ DEBUG [df369a24] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [f4fc0d73] Running /usr/bin/env rm /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml as deploy@77.244.213.7
+ DEBUG [f4fc0d73] Command: /usr/bin/env rm /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml
+  INFO [f4fc0d73] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [1569db65] Running /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/config/database.yml /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml as deploy@77.244.213.7
+ DEBUG [1569db65] Command: /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/config/database.yml /var/pain/pushkin-contest-bot/releases/20170112221350/config/database.yml
+  INFO [1569db65] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [4ffec0a9] Running [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [4ffec0a9] Command: [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml ]
+ DEBUG [4ffec0a9] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [89669110] Running [ -f /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml ] as deploy@77.244.213.7
+ DEBUG [89669110] Command: [ -f /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml ]
+ DEBUG [89669110] Finished in 0.090 seconds with exit status 1 (failed).
+  INFO [c9c9540b] Running /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/config/application.yml /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml as deploy@77.244.213.7
+ DEBUG [c9c9540b] Command: /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/config/application.yml /var/pain/pushkin-contest-bot/releases/20170112221350/config/application.yml
+  INFO [c9c9540b] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [ca80ed2a] Running /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350/public as deploy@77.244.213.7
+ DEBUG [ca80ed2a] Command: /usr/bin/env mkdir -p /var/pain/pushkin-contest-bot/releases/20170112221350/public
+  INFO [ca80ed2a] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [32320150] Running [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets ] as deploy@77.244.213.7
+ DEBUG [32320150] Command: [ -L /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets ]
+ DEBUG [32320150] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [b86b9dfd] Running [ -d /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets ] as deploy@77.244.213.7
+ DEBUG [b86b9dfd] Command: [ -d /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets ]
+ DEBUG [b86b9dfd] Finished in 0.086 seconds with exit status 1 (failed).
+  INFO [3665b01b] Running /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/public/assets /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets as deploy@77.244.213.7
+ DEBUG [3665b01b] Command: /usr/bin/env ln -s /var/pain/pushkin-contest-bot/shared/public/assets /var/pain/pushkin-contest-bot/releases/20170112221350/public/assets
+  INFO [3665b01b] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [b0ead08e] Running if test ! -d /var/pain/pushkin-contest-bot/releases/20170112221350; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases/20170112221350'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [b0ead08e] Command: if test ! -d /var/pain/pushkin-contest-bot/releases/20170112221350; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases/20170112221350'" 1>&2; false; fi
+ DEBUG [b0ead08e] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [684a8e3f] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle check --path /var/pain/pushkin-contest-bot/shared/bundle as deploy@77.244.213.7
+ DEBUG [684a8e3f] Command: cd /var/pain/pushkin-contest-bot/releases/20170112221350 && /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle check --path /var/pain/pushkin-contest-bot/shared/bundle
+ DEBUG [684a8e3f] 	[31mThe following gems are missing[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * net-ssh (4.0.1)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * sshkit (1.11.5)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * airbrussh (1.1.2)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * byebug (9.0.6)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano (3.7.1)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano-rails (1.2.2)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * ffi (1.9.14)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * listen (3.0.8)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * spring (2.0.0)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[31m * web-console (3.4.0)[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [684a8e3f] 	
+ DEBUG [684a8e3f] Finished in 1.289 seconds with exit status 1 (failed).
+  INFO [b7f40363] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle install --path /var/pain/pushkin-contest-bot/shared/bundle --without development test --deployment --quiet as deploy@77.244.213.7
+ DEBUG [b7f40363] Command: cd /var/pain/pushkin-contest-bot/releases/20170112221350 && /usr/local/rvm/bin/rvm ruby-2.3.1 do bundle install --path /var/pain/pushkin-contest-bot/shared/bundle --without development test --deployment --quiet
+  INFO [b7f40363] Finished in 5.079 seconds with exit status 0 (successful).
+  INFO [8bb656a4] Running /usr/bin/env ln -s /var/pain/pushkin-contest-bot/releases/20170112221350 /var/pain/pushkin-contest-bot/releases/current as deploy@77.244.213.7
+ DEBUG [8bb656a4] Command: /usr/bin/env ln -s /var/pain/pushkin-contest-bot/releases/20170112221350 /var/pain/pushkin-contest-bot/releases/current
+  INFO [8bb656a4] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [a278e73e] Running /usr/bin/env mv /var/pain/pushkin-contest-bot/releases/current /var/pain/pushkin-contest-bot as deploy@77.244.213.7
+ DEBUG [a278e73e] Command: /usr/bin/env mv /var/pain/pushkin-contest-bot/releases/current /var/pain/pushkin-contest-bot
+  INFO [a278e73e] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [4a06c1f4] Running /usr/bin/env ls -x /var/pain/pushkin-contest-bot/releases as deploy@77.244.213.7
+ DEBUG [4a06c1f4] Command: /usr/bin/env ls -x /var/pain/pushkin-contest-bot/releases
+ DEBUG [4a06c1f4] 	20170112220739
+ DEBUG [4a06c1f4] 		
+ DEBUG [4a06c1f4] 	20170112221350
+ DEBUG [4a06c1f4] 	
+ DEBUG [4a06c1f4] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [b6cb81db] Running if test ! -d /var/pain/pushkin-contest-bot/releases; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases'" 1>&2; false; fi as deploy@77.244.213.7
+ DEBUG [b6cb81db] Command: if test ! -d /var/pain/pushkin-contest-bot/releases; then echo "Directory does not exist '/var/pain/pushkin-contest-bot/releases'" 1>&2; false; fi
+ DEBUG [b6cb81db] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [d7b538ab] Running /usr/bin/env echo "Branch master (at 66f830dbc209fd04e5468084647f4eeccf0217fd) deployed as release 20170112221350 by kolba" >> /var/pain/pushkin-contest-bot/revisions.log as deploy@77.244.213.7
+ DEBUG [d7b538ab] Command: cd /var/pain/pushkin-contest-bot/releases && /usr/bin/env echo "Branch master (at 66f830dbc209fd04e5468084647f4eeccf0217fd) deployed as release 20170112221350 by kolba" >> /var/pain/pushkin-contest-bot/revisions.log
+  INFO [d7b538ab] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 19:57:41 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8a131296] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [8a131296] Command: [ -d ~/.rvm ]
+ DEBUG [8a131296] Finished in 4.653 seconds with exit status 1 (failed).
+ DEBUG [eadadfc1] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [eadadfc1] Command: [ -d /usr/local/rvm ]
+ DEBUG [eadadfc1] Finished in 5.369 seconds with exit status 0 (successful).
+ DEBUG [73a165ab] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [73a165ab] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [73a165ab] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [73a165ab] 	
+ DEBUG [73a165ab] Finished in 3.191 seconds with exit status 0 (successful).
+ DEBUG [9499a9c0] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [9499a9c0] Command: /usr/local/rvm/bin/rvm current
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:03:30 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1046c64e] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [1046c64e] Command: [ -d ~/.rvm ]
+ DEBUG [1046c64e] Finished in 0.926 seconds with exit status 1 (failed).
+ DEBUG [8650238a] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [8650238a] Command: [ -d /usr/local/rvm ]
+ DEBUG [8650238a] Finished in 0.731 seconds with exit status 0 (successful).
+ DEBUG [4e3c085a] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [4e3c085a] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [4e3c085a] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [4e3c085a] 	
+ DEBUG [4e3c085a] Finished in 0.908 seconds with exit status 0 (successful).
+ DEBUG [61a8129d] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [61a8129d] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [61a8129d] 	ruby-2.3.3
+ DEBUG [61a8129d] 	
+ DEBUG [61a8129d] Finished in 0.990 seconds with exit status 0 (successful).
+ DEBUG [2fed9e44] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [2fed9e44] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [2fed9e44] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [2fed9e44] 	
+ DEBUG [2fed9e44] Finished in 0.895 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:04:20 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [cf07cbb4] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [cf07cbb4] Command: [ -d ~/.rvm ]
+ DEBUG [cf07cbb4] Finished in 0.750 seconds with exit status 1 (failed).
+ DEBUG [f862d8ba] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [f862d8ba] Command: [ -d /usr/local/rvm ]
+ DEBUG [f862d8ba] Finished in 0.742 seconds with exit status 0 (successful).
+ DEBUG [6ec6f0d2] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [6ec6f0d2] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [6ec6f0d2] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [6ec6f0d2] 	
+ DEBUG [6ec6f0d2] Finished in 0.989 seconds with exit status 0 (successful).
+ DEBUG [3bb0b2ca] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [3bb0b2ca] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [3bb0b2ca] 	ruby-2.3.3
+ DEBUG [3bb0b2ca] 	
+ DEBUG [3bb0b2ca] Finished in 0.852 seconds with exit status 0 (successful).
+ DEBUG [50d5ebcb] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [50d5ebcb] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [50d5ebcb] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [50d5ebcb] 	
+ DEBUG [50d5ebcb] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:05:36 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [67185aa2] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [67185aa2] Command: [ -d ~/.rvm ]
+ DEBUG [67185aa2] Finished in 1.149 seconds with exit status 1 (failed).
+ DEBUG [01b5a271] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [01b5a271] Command: [ -d /usr/local/rvm ]
+ DEBUG [01b5a271] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG [cf0e1954] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [cf0e1954] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [cf0e1954] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [cf0e1954] 	
+ DEBUG [cf0e1954] Finished in 1.479 seconds with exit status 0 (successful).
+ DEBUG [293ecfae] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [293ecfae] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [293ecfae] 	ruby-2.3.3
+ DEBUG [293ecfae] 	
+ DEBUG [293ecfae] Finished in 1.231 seconds with exit status 0 (successful).
+ DEBUG [5fb9ddff] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [5fb9ddff] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [5fb9ddff] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [5fb9ddff] 	
+ DEBUG [5fb9ddff] Finished in 0.821 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:05:53 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8c51f174] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [8c51f174] Command: [ -d ~/.rvm ]
+ DEBUG [8c51f174] Finished in 0.848 seconds with exit status 1 (failed).
+ DEBUG [22321497] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [22321497] Command: [ -d /usr/local/rvm ]
+ DEBUG [22321497] Finished in 0.797 seconds with exit status 0 (successful).
+ DEBUG [75ab57fb] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [75ab57fb] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [75ab57fb] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [75ab57fb] 	
+ DEBUG [75ab57fb] Finished in 1.211 seconds with exit status 0 (successful).
+ DEBUG [64aa2d9a] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [64aa2d9a] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [64aa2d9a] 	ruby-2.3.3
+ DEBUG [64aa2d9a] 	
+ DEBUG [64aa2d9a] Finished in 1.290 seconds with exit status 0 (successful).
+ DEBUG [73395d5d] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [73395d5d] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [73395d5d] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [73395d5d] 	
+ DEBUG [73395d5d] Finished in 0.721 seconds with exit status 0 (successful).
+  INFO [24eb0d0e] Running /usr/bin/env mkdir -p /tmp as deploy@77.244.213.7
+ DEBUG [24eb0d0e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [24eb0d0e] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 0.0%
+  INFO Uploading /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh 100.0%
+  INFO [54400f4d] Running /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh as deploy@77.244.213.7
+ DEBUG [54400f4d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-pushkin-contest-bot-production-kolba.sh
+  INFO [54400f4d] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [c850ffe4] Running /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git as deploy@77.244.213.7
+ DEBUG [c850ffe4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-pushkin-contest-bot-production-kolba.sh" ; /usr/bin/env git ls-remote --heads git@github.com:kolbaA/pushkin-contest-bot.git )
+ DEBUG [c850ffe4] 	Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:06:46 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a9dd3c51] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [a9dd3c51] Command: [ -d ~/.rvm ]
+ DEBUG [a9dd3c51] Finished in 0.801 seconds with exit status 1 (failed).
+ DEBUG [eb25d865] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [eb25d865] Command: [ -d /usr/local/rvm ]
+ DEBUG [eb25d865] Finished in 0.808 seconds with exit status 0 (successful).
+ DEBUG [e3fd748f] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [e3fd748f] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [e3fd748f] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [e3fd748f] 	
+ DEBUG [e3fd748f] Finished in 1.428 seconds with exit status 0 (successful).
+ DEBUG [80c60b3c] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [80c60b3c] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [80c60b3c] 	ruby-2.3.3
+ DEBUG [80c60b3c] 	
+ DEBUG [80c60b3c] Finished in 1.126 seconds with exit status 0 (successful).
+ DEBUG [f5eb8f4d] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [f5eb8f4d] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [f5eb8f4d] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [f5eb8f4d] 	
+ DEBUG [f5eb8f4d] Finished in 1.124 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:06:55 +0300 cap production puma
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09073845] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [09073845] Command: [ -d ~/.rvm ]
+ DEBUG [09073845] Finished in 0.684 seconds with exit status 1 (failed).
+ DEBUG [a937d094] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [a937d094] Command: [ -d /usr/local/rvm ]
+ DEBUG [a937d094] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [d1b0cb50] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [d1b0cb50] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [d1b0cb50] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [d1b0cb50] 	
+ DEBUG [d1b0cb50] Finished in 1.262 seconds with exit status 0 (successful).
+ DEBUG [a11087f9] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [a11087f9] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [a11087f9] 	ruby-2.3.3
+ DEBUG [a11087f9] 	
+ DEBUG [a11087f9] Finished in 1.240 seconds with exit status 0 (successful).
+ DEBUG [cfa93465] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [cfa93465] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [cfa93465] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [cfa93465] 	
+ DEBUG [cfa93465] Finished in 0.966 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-13 20:07:12 +0300 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e925f266] Running [ -d ~/.rvm ] as deploy@77.244.213.7
+ DEBUG [e925f266] Command: [ -d ~/.rvm ]
+ DEBUG [e925f266] Finished in 0.825 seconds with exit status 1 (failed).
+ DEBUG [e8c09ce2] Running [ -d /usr/local/rvm ] as deploy@77.244.213.7
+ DEBUG [e8c09ce2] Command: [ -d /usr/local/rvm ]
+ DEBUG [e8c09ce2] Finished in 0.783 seconds with exit status 0 (successful).
+ DEBUG [15113c8b] Running /usr/local/rvm/bin/rvm version as deploy@77.244.213.7
+ DEBUG [15113c8b] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [15113c8b] 	rvm 1.28.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [15113c8b] 	
+ DEBUG [15113c8b] Finished in 1.348 seconds with exit status 0 (successful).
+ DEBUG [5f977d6b] Running /usr/local/rvm/bin/rvm current as deploy@77.244.213.7
+ DEBUG [5f977d6b] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [5f977d6b] 	ruby-2.3.3
+ DEBUG [5f977d6b] 	
+ DEBUG [5f977d6b] Finished in 0.950 seconds with exit status 0 (successful).
+ DEBUG [5849a7fd] Running /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version as deploy@77.244.213.7
+ DEBUG [5849a7fd] Command: /usr/local/rvm/bin/rvm ruby-2.3.1 do ruby --version
+ DEBUG [5849a7fd] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [5849a7fd] 	
+ DEBUG [5849a7fd] Finished in 0.892 seconds with exit status 0 (successful).
