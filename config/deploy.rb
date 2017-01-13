@@ -9,7 +9,7 @@ set :repo_url, 'git@github.com:kolbaA/pushkin-contest-bot.git'  # Edit this to m
 set :branch, :master
 set :deploy_to, '/var/www/pushkin-contest-bot'
 set :pty, true
-set :linked_files, %w{config/database.yml config/application.yml config/puma.rb}
+set :linked_files, %w{config/database.yml config/application.yml}
 set :keep_releases, 5
 set :bundle_binstubs, nil
 set :rvm_ruby_version, 'ruby-2.3.1'   # Edit this to match ruby version you use
