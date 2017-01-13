@@ -8,7 +8,6 @@ class QuestionController < ApplicationController
       Question.create(question_params)
       Answer.create(answer_params)
     end
-    #binding.pry
   end
 
   def question_id
