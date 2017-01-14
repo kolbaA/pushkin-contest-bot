@@ -27,9 +27,12 @@ class QuestionController < ApplicationController
   end
 
   def leveler(level)
+      level = level.to_s
     if level.eql?('2') | level.eql?('3') | level.eql?('4')
       level = 'level2to4'
+    else
+      level = "level#{level}"
     end
-    "level#{level}"
+      level
   end
 end
