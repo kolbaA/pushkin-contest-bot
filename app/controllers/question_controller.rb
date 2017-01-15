@@ -3,15 +3,11 @@ class QuestionController < ApplicationController
     head :ok, content_type: 'text/html'
     @question = Question.new(question_params)
     @answer = Answer.new(value: @question.send(leveler(params[:level].to_s)), task_id: @question.id)
-    do_post(@answer)
     Thread.new do
+      do_post(@answer)
       Question.create(question_params)
       Answer.create(answer_params)
     end
-  end
-
-  def question_id
-    Question.all.last.id
   end
 
   def question_params
@@ -20,7 +16,7 @@ class QuestionController < ApplicationController
 
   def answer_params
     {
-      question_id: question_id,
+      question_id: @question.id,
       value: @answer.value,
       task_id: @answer.task_id
     }
