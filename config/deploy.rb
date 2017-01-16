@@ -12,7 +12,7 @@ set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :keep_releases, 5
 set :bundle_binstubs, nil
-set :rvm_ruby_version, 'ruby-2.3.1'   # Edit this to match ruby version you use
+set :rvm_ruby_version, 'ruby-2.4.0'   # Edit this to match ruby version you use
 set :stage, :production
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
@@ -20,14 +20,15 @@ set :puma_state, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.state"
 set :puma_pid, "/var/www/pushkin-contest-bot/shared/tmp/pids/puma.pid"
 set :puma_bind, "unix:///var/www/pushkin-contest-bot/shared/tmp/sockets/puma.sock"    #accept array for multi-bind
 set :puma_conf, "/var/www/pushkin-contest-bot/shared/puma.rb"
-set :puma_access_log, "/var/www/pushkin-contest-bot/shared/tmp/log/puma_error.log"
-set :puma_error_log, "/var/www/pushkin-contest-bot/shared/tmp/log/puma_access.log"
+set :puma_access_log, "/var/www/pushkin-contest-bot/shared/tmp/log/puma_access.log"
+set :puma_error_log, "/var/www/pushkin-contest-bot/shared/tmp/log/puma_error.log"
 set :puma_role, :app
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
 set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
+#bundle exec puma -b unix:///var/www/pushkin-contest-bot/shared/tmp/sockets/puma.sock
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
