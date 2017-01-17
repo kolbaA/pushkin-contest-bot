@@ -2,7 +2,8 @@ class QuestionController < ApplicationController
   def new
     head :ok, content_type: 'text/html'
     @question = Question.new(question_params)
-    @answer = Answer.new(value: @question.method(leveler(params[:level].to_sym)).call, task_id: @question.id)
+    current_level = leveler(params[:level]).to_sym
+    @answer = Answer.new(value: @question.method(current_level).call, task_id: @question.id)
     thr = Thread.new do
       do_post(@answer)
       Question.create(question_params)
@@ -24,8 +25,7 @@ class QuestionController < ApplicationController
   end
 
   def leveler(level)
-      level = level.to_s
-    if level.eql?('2') | level.eql?('3') | level.eql?('4')
+    if level.eql?(2) | level.eql?(3) | level.eql?(4)
       level = 'level2to4'
     else
       level = "level#{level}"
