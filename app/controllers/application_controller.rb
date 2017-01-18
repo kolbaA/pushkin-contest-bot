@@ -6,12 +6,12 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def do_post(answer)
+  def do_post(answer, task_id)
     uri = URI('http://pushkin.rubyroidlabs.com/quiz')
     parametrs = {
-      'answer' => answer.value,
+      'answer' => answer
       'token'  => ENV['TOKEN'],
-      'task_id' => answer.task_id
+      'task_id' => task_id
     }
     Net::HTTP.post_form(uri, parametrs)
     end

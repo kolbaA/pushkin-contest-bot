@@ -3,8 +3,6 @@
 #environment 'production'
 daemonize false
 
-pidfile '/var/www/pushkin-contest-bot/shared/tmp/pids/puma.pid'
-state_path '/var/www/pushkin-contest-bot/shared/tmp/pids/puma.state'
 
 stdout_redirect 'log/puma.log', 'log/puma_err.log'
 
