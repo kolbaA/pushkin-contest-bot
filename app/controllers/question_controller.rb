@@ -3,6 +3,7 @@ class QuestionController < ApplicationController
     head :ok, content_type: 'text/html'
     @question = params[:question]
     @task_id = params[:id]
+    @result_answer = ""
     search_answer(params[:level])
     #@answer = Answer.new(value: @question.send(leveler(params[:level]).to_s, task_id: @question.id)
     Question.create(question_params)
@@ -16,7 +17,7 @@ class QuestionController < ApplicationController
   def answer_params
     {
       question_id: params[:id],
-      value: @answer
+      value: @result_answer,
       task_id: params[:id]
     }
   end
@@ -26,22 +27,27 @@ class QuestionController < ApplicationController
     when 1
       do_post(level1,@task_id)
     when 2 | 3 | 4
+      level2to4
       do_post(level2to4,@task_id)
     when 5
+      level5
       do_post(level5,@task_id)
     when 6
+      level6
       do_post(level6,@task_id)
     when 7
+      level7
       do_post(level7,@task_id)
     when 8
 
     end
+  end
 
   def level1
     start = Time.now
-    @answer = POEMS[@question.strip.to_s]
+    @result_answer = POEMS[@question.strip.to_s]
     puts "#{(Time.now - start)*1000}ms | LEVEL1"
-    @answer
+    @result_answer
   end
 
   def level2to4
@@ -49,9 +55,9 @@ class QuestionController < ApplicationController
     lines = @question.split("\n")
     answer = []
     lines.each { |line| answer << POEMS_WITHOUT_WORD[line.strip.to_s] }
-    @answer = answer.reject(&nil).to_a.join(',')
+    @result_answer = answer.reject(&nil).to_a.join(',')
     puts "#{(Time.now - start)*1000}ms | LEVEL2to4"
-    @answer
+    @result_answer
   end
 
   def level5
@@ -68,9 +74,9 @@ class QuestionController < ApplicationController
       end
       words[index] = val
     end
-    @answer = answer.join(',')
+    @result_answer = answer.join(',')
     puts "#{(Time.now - start)*1000}ms | LEVEL5"
-    @answer
+    @result_answer
   end
 
   def level6
@@ -78,20 +84,20 @@ class QuestionController < ApplicationController
     answer = []
     line = @question.split(' ')
     line.each { |w| answer << w.split('').sort.join('') }
-    @answer = POEMS_FOR_6_LEVEL[answer.join(' ').to_s]
+    @result_answer = POEMS_FOR_6_LEVEL[answer.join(' ').to_s]
     puts "#{(Time.now - start)*1000}ms | LEVEL6"
-    @answer
+    @result_answer
   end
 
   def level7
     start = Time.now
     answer = @question.split('').sort.join('')
-    @answer = POEMS_FOR_7_LEVEL[answer.to_s]
+    @result_answer = POEMS_FOR_7_LEVEL[answer.to_s]
     puts "#{(Time.now - start)*1000}ms | LEVEL6"
-    @answer
+    @result_answer
   end
 
   def level8
-      
+
   end
 end
