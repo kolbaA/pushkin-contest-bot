@@ -41,12 +41,14 @@ class Question < ApplicationRecord
   end
 
   def level8
+    start = Time.now
     #Regexp.new()
     #"Ббгееклмнооорртуюя".slice(/[^БЭбгеелмнооорртуюя]/)
 # => "к"
 #2.3.0 :102 > "БЭбгееклмнооорртуюя".slice(/[^Ббгееклмнооорртуюя]/)
 #=> "Э"
     #
+    puts "#{(Time.now - start)*1000}ms | LEVEL 8"
   end
 
 end

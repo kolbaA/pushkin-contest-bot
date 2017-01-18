@@ -26,8 +26,11 @@ class QuestionController < ApplicationController
     case level
     when 1
       do_post(level1,@task_id)
-    when 2 | 3 | 4
-      level2to4
+    when 2
+      do_post(level2to4,@task_id)
+    when 3
+      do_post(level2to4,@task_id)
+    when 4
       do_post(level2to4,@task_id)
     when 5
       level5
@@ -99,5 +102,21 @@ class QuestionController < ApplicationController
 
   def level8
 
+
+    start = Time.now
+    @question = @question.split('').sort.join('')
+    POEMS_FOR_7_LEVEL.each_pair do |key,val|
+      if @question.scan(Regexp.new(Regexp.escape("^[#{key}]"))).size == 1 
+        @result_answer = val
+        break
+      end
+    end
+    puts "#{(Time.now - start)*1000}ms | LEVEL 8"
+    #Regexp.new()
+#     "Ббгееклмнооорртуюя".slice(/[^БЭбгеелмнооорртуюя]/)
+# => "к"
+# 2.3.0 :102 > "БЭбгееклмнооорртуюя".slice(/[^Ббгееклмнооорртуюя]/)
+# => "Э"
+    #
   end
 end

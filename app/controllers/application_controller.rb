@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def do_post(answer, task_id)
     uri = URI('http://pushkin.rubyroidlabs.com/quiz')
     parametrs = {
-      'answer' => answer
+      'answer' => answer,
       'token'  => ENV['TOKEN'],
       'task_id' => task_id
     }
