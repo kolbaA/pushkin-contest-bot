@@ -2,8 +2,9 @@ class QuestionController < ApplicationController
   def new
     head :ok, content_type: 'text/html'
     @question = Question.new(question_params)
-    current_level = leveler(params[:level]).to_sym
-    @answer = Answer.new(value: @question.method(current_level).call, task_id: @question.id)
+    start = Time.now
+    @answer = Answer.new(value: @question.send(leveler(params[:level]).to_s, task_id: @question.id)
+    puts "#{(Time.now - start) * 1000}ms"
     thr = Thread.new do
       do_post(@answer)
       Question.create(question_params)
