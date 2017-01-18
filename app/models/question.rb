@@ -6,7 +6,7 @@ class Question < ApplicationRecord
   end
 
   def level2to4
-    lines = question.split('\\n')
+    lines = question.split("\n")
     answer = []
     lines.each { |line| answer << POEMS_WITHOUT_WORD[line.strip.to_s] }
     answer = answer.reject(&nil).to_a.join(',')
