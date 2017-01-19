@@ -42,13 +42,20 @@ class Question < ApplicationRecord
 
   def level8
     start = Time.now
-    #Regexp.new()
-    #"Ббгееклмнооорртуюя".slice(/[^БЭбгеелмнооорртуюя]/)
-# => "к"
-#2.3.0 :102 > "БЭбгееклмнооорртуюя".slice(/[^Ббгееклмнооорртуюя]/)
-#=> "Э"
-    #
-    puts "#{(Time.now - start)*1000}ms | LEVEL 8"
-  end
+       @question = @question.split('').sort.join('').strip
+       POEMS_FOR_7_LEVEL.each_pair do |key,val|
+      ar1 = key.strip.split('') - @question.split('')
+      ar2 = @question.split('') - key.strip.split('')
+      if (ar1.size == 1) && (ar2.size == 1)
+        @result_answer  = val
+        break
+        end
+      end
+
+       puts "#{(Time.now - start)*1000}ms | LEVEL 8"
+    puts @result_answer
+       @result_answer
+
+end
 
 end

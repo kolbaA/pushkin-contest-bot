@@ -33,16 +33,13 @@ class QuestionController < ApplicationController
     when 4
       do_post(level2to4,@task_id)
     when 5
-      level5
       do_post(level5,@task_id)
     when 6
-      level6
       do_post(level6,@task_id)
     when 7
-      level7
       do_post(level7,@task_id)
     when 8
-
+      do_post(level8,@task_id)
     end
   end
 
@@ -101,22 +98,20 @@ class QuestionController < ApplicationController
   end
 
   def level8
-
-
     start = Time.now
-    @question = @question.split('').sort.join('')
-    POEMS_FOR_7_LEVEL.each_pair do |key,val|
-      if @question.scan(Regexp.new(Regexp.escape("^[#{key}]"))).size == 1 
-        @result_answer = val
+       @question = @question.split('').sort.join('').strip
+       POEMS_FOR_7_LEVEL.each_pair do |key,val|
+      ar1 = key.strip.split('') - @question.split('')
+      ar2 = @question.split('') - key.strip.split('')
+      if (ar1.size == 1) && (ar2.size == 1)
+        @result_answer  = val
         break
+        end
       end
-    end
-    puts "#{(Time.now - start)*1000}ms | LEVEL 8"
-    #Regexp.new()
-#     "Ббгееклмнооорртуюя".slice(/[^БЭбгеелмнооорртуюя]/)
-# => "к"
-# 2.3.0 :102 > "БЭбгееклмнооорртуюя".slice(/[^Ббгееклмнооорртуюя]/)
-# => "Э"
-    #
+
+       puts "#{(Time.now - start)*1000}ms | LEVEL 8"
+    puts @result_answer
+       @result_answer
+
   end
 end
